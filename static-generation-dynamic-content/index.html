@@ -1,0 +1,191 @@
+
+<!doctype html>
+<html>
+  <head>
+  <meta charset="utf-8" />
+  <title>Static generation dynamic content</title>
+  <style>
+    @font-face{font-family:source sans pro;font-style:normal;font-weight:400;src:url(https://use.typekit.net/af/be76d4/00000000000000003b9b3129/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)format("woff2")}@font-face{font-family:source sans pro;font-style:italic;font-weight:400;src:url(https://use.typekit.net/af/35658c/00000000000000003b9b312a/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3)format("woff2")}@font-face{font-family:source code pro;font-style:normal;font-weight:400;src:url(https://use.typekit.net/af/3c21b3/0000000000000000000179cf/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)format("woff2")}@font-face{font-family:source serif pro;font-style:normal;font-weight:400;src:url(https://use.typekit.net/af/aa546d/00000000000000003b9b3a87/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3)format("woff2")}@font-face{font-family:source serif pro;font-style:italic;font-weight:400;src:url(https://use.typekit.net/af/190e58/00000000000000003b9b3a88/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3)format("woff2")}h1{text-align:left;font-weight:400;line-height:1.3;color:crimson}@media(prefers-color-scheme:dark){h1{color:#14dbb3}}h2{text-align:left;font-weight:400;line-height:1.3;color:crimson}@media(prefers-color-scheme:dark){h2{color:#14dbb3}}h3{text-align:left;font-weight:400;line-height:1.3;color:crimson}@media(prefers-color-scheme:dark){h3{color:#14dbb3}}h4{text-align:left;font-weight:400;line-height:1.3;color:crimson}@media(prefers-color-scheme:dark){h4{color:#14dbb3}}h5{text-align:left;font-weight:400;line-height:1.3;color:crimson}@media(prefers-color-scheme:dark){h5{color:#14dbb3}}h6{text-align:left;font-weight:400;line-height:1.3;color:crimson}@media(prefers-color-scheme:dark){h6{color:#14dbb3}}header{text-align:left;font-weight:400;line-height:1.3;color:crimson}@media(prefers-color-scheme:dark){header{color:#14dbb3}}html{height:100%}body{color:#000;background-color:#fff;padding:0;line-height:1.5;font-size:1.2rem;font-family:source sans pro,sans-serif;font-variant:common-ligatures oldstyle-nums proportional-nums;text-align:justify;margin-left:auto;margin-right:auto;position:relative;min-height:100%}@media(prefers-color-scheme:dark){body{color:#fff;background-color:#191919}}p{-ms-word-break:break-all;word-break:break-all;word-break:break-word;-webkit-hyphens:auto;-moz-hyphens:auto;hyphens:auto}p+.tagline{margin-top:1rem}.tagline+.tagline{margin-top:-1rem}em{font-style:italic}strong,footer{font-variant:small-caps oldstyle-nums proportional-nums;font-weight:400}pre{word-wrap:normal;padding:2rem 1rem}pre,code{font-family:source code pro,monospace;font-size:smaller}header,footer{margin:4rem 2rem;text-align:center}footer{position:absolute;bottom:0;right:0;left:0;font-size:smaller}section+footer{padding-bottom:4rem}footer a,.tagline a,.tagline time{margin:0 .2rem;font-variant:common-ligatures oldstyle-nums proportional-nums}a{color:crimson;text-decoration:none}@media(prefers-color-scheme:dark){a{color:#14dbb3}}a:hover{text-decoration:underline}img{width:100%;max-width:64rem;margin:2rem auto;display:block}h1 img,h2 img,h3 img,h4 img,h5 img,h6 img,p img{width:auto;margin:auto;display:inline;vertical-align:middle}svg{fill:crimson}@media(prefers-color-scheme:dark){svg{fill:#14dbb3}}figcaption{text-align:center;font-style:italic;font-size:smaller}section>:not(img),article>:not(img){margin:1rem auto;padding:0 2rem;max-width:48rem}article>h1,article>h2,article>h3,article>h4,article>h5,article>h6{margin:0 auto}h1+h1,h2+h1,h3+h1,h4+h1,h5+h1,h6+h1,h1+h2,h2+h2,h3+h2,h4+h2,h5+h2,h6+h2,h1+h3,h2+h3,h3+h3,h4+h3,h5+h3,h6+h3,h1+h4,h2+h4,h3+h4,h4+h4,h5+h4,h6+h4,h1+h5,h2+h5,h3+h5,h4+h5,h5+h5,h6+h5,h1+h6,h2+h6,h3+h6,h4+h6,h5+h6,h6+h6{margin:0 auto}section+footer{position:relative}blockquote{padding:0 1rem}blockquote,.micro-excerpt>:not(img){margin:0 auto;border-style:solid;border-width:0 0 0 6px;border-color:crimson}@media(prefers-color-scheme:dark){blockquote,.micro-excerpt>:not(img){border-color:#14dbb3}}article{padding:5vh 0 10rem}article+article{padding-top:0;margin-top:-10vh}ul li{margin:0 2rem}.avatar{width:1rem;height:1rem;border-radius:50%;object-fit:cover}.micro-excerpt>:last-child,.article-excerpt>:last-child{padding:0 2rem 1rem;margin:0 auto}.micro-excerpt>:first-child,.article-excerpt>:first-child{padding:1rem 2rem 0;margin:0 auto}.micro-excerpt>:not(img),.article-excerpt>:not(img){padding:0 2rem}.micro-excerpt ul{list-style-type:none}.micro-excerpt ul li{margin:0 auto}.micro-excerpt blockquote,.article-excerpt blockquote{padding:0;border-style:none;font-style:italic}.article-excerpt{margin:2rem 0}.categories{color:gray;padding-top:0;margin-top:0}.image-list{white-space:nowrap;overflow:auto}.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(20rem,1fr));gap:1rem;margin:2rem 0;width:fit-content;margin:0 auto}.gallery img{width:100%;height:100%;object-fit:cover;max-height:40vh;max-width:100%;margin:2rem auto;border-radius:1rem;box-shadow:0 2px 8px rgba(0,0,0,.1);display:block}.image-list img,.featured-image img{max-height:50vh;max-width:100%;margin:2rem auto;width:auto;height:auto;border-radius:1rem;box-shadow:0 2px 8px rgba(0,0,0,.1);overflow:hidden;display:block}.micro-excerpt .image-list img,.micro-excerpt .featured-image img{max-height:25vh}.fiction p{margin:1rem auto 0;max-width:40rem;font-family:source serif pro,serif;font-variant:common-ligatures oldstyle-nums proportional-nums}.fiction>p+p{margin:0 auto;text-indent:1rem}.fiction>hr{margin:2rem;padding:0;border-width:0}.tag-cloud{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0}.tag-cloud .tag a{text-decoration:none;color:inherit}.tag-cloud .weight-1{font-size:.75rem}.tag-cloud .weight-2{font-size:1rem}.tag-cloud .weight-3{font-size:1.25rem}.tag-cloud .weight-4{font-size:1.5rem}.tag-cloud .weight-5{font-size:2rem;font-weight:700}.highlight{border-radius:15px}.tagline{text-align:right}.tagline svg{height:1rem}.social{padding:0 .5rem}article h1{position:relative}.navigation-element{position:absolute;left:.5rem}.toc{display:flex;align-items:baseline;gap:.5ch;white-space:nowrap;padding:.5rem 0}.toc .title,.toc .date{flex-shrink:0}.toc .dots{flex-grow:1;position:relative;height:1px;background-image:repeating-linear-gradient(to right,currentColor 0 1px,transparent 0 4px);background-size:auto 1px;background-repeat:repeat-x;background-position:50%;margin:0 .5ch}.toc .separator{display:none}.pagination{list-style:none;display:flex;gap:.5rem;justify-content:center;padding:2rem 0}.pagination li{margin:0}.pagination li a{text-decoration:none;padding:.4rem .8rem;color:crimson;opacity:.8}@media(prefers-color-scheme:dark){.pagination li a{color:#14dbb3}}.pagination li a:hover{opacity:1}.pagination li.active a{font-weight:700;color:#000}@media(prefers-color-scheme:dark){.pagination li.active a{color:#fff}}.pagination li.disabled a{opacity:.3;pointer-events:none}a.navigation-element:hover,header a:hover{text-decoration:none}#genre{font-variant:small-caps}#site-title{font-size:5rem}@media only screen and (max-width:64rem){section>:not(img),article>:not(img){max-width:70%}.fiction p{max-width:62%}}@media only screen and (max-width:48rem){body{text-align:left}.toc{display:block}.toc .separator{display:inline}.toc .dots{display:none}}@media only screen and (max-width:42rem){#site-title{font-size:3rem}body{font-size:1rem}section>:not(img),article>:not(img){max-width:80%}blockquote{font-style:italic}blockquote,.micro-excerpt>:not(img){border-width:0}.toc{display:block}.fiction p{max-width:80%}.micro-excerpt>:last-child,.article-excerpt>:last-child{padding:0 0 1rem}.micro-excerpt>:first-child,.article-excerpt>:first-child{padding:1rem 0 0}.toc .dots{display:none}.toc .separator{display:inline}}
+  </style>
+</head>
+
+  <body>
+    <header id="site-title">
+  <a href="/"><span role="text" aria-label="fernseed">Ꮅ̣</span></a>
+</header>
+   
+<article class="technology">
+  <p>This is a <a href="http://en.wikipedia.org/wiki/Static_web_page">static</a> website&mdash;the content you&rsquo;re reading now is generated once, for all visitors, then presented in the same way each time for each browser request. That&rsquo;s slightly different from the (current) internet norm of generating content as it&rsquo;s requested, possibly on a targeted per-user basis, and probably using a database or some server-side business logic. Think of Wordpress and its plugins as examples of the latter, while <a href="http://blog.getpelican.com">Pelican</a>, <a href="http://jekyllrb.com">Jekyll</a>, and <a href="http://octopress.org">Octopress</a> would be examples of the former.</p>
+<p>As to why: static sites can be quicker for a browser to retrieve compared to &lsquo;dynamic&rsquo; versions since they&rsquo;re more easily cacheable by <a href="http://en.wikipedia.org/wiki/Content_delivery_network"><strong>cdn</strong></a>s out-of the-box. They also tend to have lower processing overhead for the servers which host them.</p>
+<p>Even though the back-end mechanics are very different, there&rsquo;s not as much variation in how the site content is written under either approach, since today&rsquo;s websites typically use some kind of <a href="http://en.wikipedia.org/wiki/Content_management_system"><strong>cms</strong></a> or templating system to create and organise content. Just because a website is static it doesn&rsquo;t mean that you&rsquo;re constrained to writing everything in pure, flat <strong>html</strong>, any more than a dynamic site would be written as a set of <strong>sql</strong> queries. For this site, everything is <!-- raw HTML omitted -->written in Markdown<!-- raw HTML omitted -->.</p>
+<p>The basic goal of a static website is for its content to be <em>complete</em> and <em>universal</em> at the moment it is turned into <strong>html</strong> for publication&mdash;a single set of generated content is all that any client browser ever sees. To complicate the distinction with dynamic sites, there are a variety of <a href="https://wordpress.org/plugins/wp-super-cache/">caching plugins</a> for Wordpress that try to do the same thing.</p>
+<p>This doesn&rsquo;t mean that a <em>static</em> site can&rsquo;t be <em>interactive</em>, it just means that any interactivity needs to be handled on the client-side, normally using some flavour of JavaScript. This may actually lead to additional server round-trips as additional data is requested via <a href="http://en.wikipedia.org/wiki/Ajax_(programming)"><strong>ajax</strong></a> or similar techniques, based on user interaction. However, since client-side interactivity is a fairly standard approach to creating websites at the moment, you&rsquo;ll probably find that the same is true for non-statically generated sites too. The &lsquo;static&rsquo; part of the name refers purely to the server-side, the <em>generation</em> side, although even there any eventually-static content will be built dynamically from a set of templates and page-specific logic. In other words, the content that is actually served to your browser can still be different from that which I originally write.</p>
+<p>What on earth am I talking about? Let&rsquo;s take an example&hellip;</p>
+<h2 id="the-experiment">The Experiment</h2>
+<p><a href="http://jamierubin.net">Jamie Rubin</a> is a sci-fi author and programmer who, as part of a more wide-ranging personal project involving self-quantification, has spent some time gathering data about his writing habits and providing visualisations of that data for the benefit of his readers. He uses Google Docs for his writing and has created a set of scripts which will take metadata from those docs and use them as the basis for his visualisations&mdash;you can read about that process <a href="http://www.jamierubin.net/2014/08/08/how-i-use-google-docs-for-writing/">on his blog</a>.</p>
+<p>What would it take to do something similar, making use of only static-website technologies such as Jekyll? There&rsquo;s no reason you couldn&rsquo;t plug some offline Google Docs-derived stats into a static website, but we&rsquo;ll do something different here. Our flow might look something like this:</p>
+<!-- raw HTML omitted -->
+<p>We could generate some writing statistics offline which we would store and keep updated in a suitable flat data file on the server; use Jekyll templates to interpolate any additional data required; then plug the output into a JavaScript visualisation library so that we can get some pretty and interactive charts.</p>
+<p>The data we&rsquo;ll gather should be as simple as possible, I&rsquo;ll try to keep it expressible in just a couple of columns in a <strong>csv</strong> text file. You could use <strong>json</strong> if you prefer&mdash;I&rsquo;m using a flat <strong>csv</strong> since it&rsquo;s trivial to add additional lines to it using a shell script. We should then be able to use Jekyll&rsquo;s <a href="http://jekyllrb.com/docs/templates/">Liquid-derived</a> templating engine to work out any additional calculated data and relationships we need, such as full-period and floating 7-day averages to mimic Jamie&rsquo;s setup. <a href="https://developers.google.com/chart/">Google Charts</a> should give us everything required to allow some basic interaction by the end user through JavaScript.</p>
+<h3 id="data-structure">Data Structure</h3>
+<p>We&rsquo;ll keep our <strong>csv</strong> layout as trivial as possible:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c0caf5;background-color:#1a1b26;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>date,  fiction,  non-fiction
+</span></span><span style="display:flex;"><span>2015-02-14, 31994,  4438
+</span></span><span style="display:flex;"><span>2015-02-15, 31994,  4463
+</span></span><span style="display:flex;"><span>2015-02-16, 31994,  5156
+</span></span><span style="display:flex;"><span>2015-02-17, 32009,  5283
+</span></span><span style="display:flex;"><span>2015-02-18, 32009,  5413
+</span></span><span style="display:flex;"><span>2015-02-19, 32073,  5552
+</span></span><span style="display:flex;"><span>2015-02-20, 32073,  5700
+</span></span></code></pre></div><p>The <code>fiction</code> and <code>non-fiction</code> columns will be a raw word count and we&rsquo;ll work out intervals such as daily increase in words written and our averages using tag and filter logic.</p>
+<p>So with Jekyll we&rsquo;ll need to:</p>
+<ol>
+<li>Cycle through each element in the <strong>csv</strong></li>
+<li>Turn the raw daily total into a daily increment</li>
+<li>Generate an overall average based on each entry to date</li>
+<li>Generate a floating weekly average to that point</li>
+<li>Work out what period of time we&rsquo;re going to use for the report</li>
+</ol>
+<p>Whereas with JavaScript we&rsquo;ll only need to:</p>
+<ol>
+<li>Draw the chart</li>
+</ol>
+<p>This keeps the division of labour biased pretty heavily toward the one-time generation step.</p>
+<h2 id="collecting-data-from-scrivener">Collecting Data from Scrivener</h2>
+<p>Since I use <a href="http://www.literatureandlatte.com/scrivener.php">Scrivener</a> for any long-form writing I could just go to it directly for the statistics I&rsquo;m looking for&mdash;it tracks those details in its Project Target metadata, but unlike Google Docs it does not expose that data through an API. That doesn&rsquo;t stop us extracting it ourselves using a script since the data we care about is held within a readable section of the document package&rsquo;s interior <code>.scrivx</code> file. It&rsquo;s held under an element called <code>PreviousSession</code>, which actually refers to the session in progress. A &lsquo;session&rsquo; in this context refers to an automatically or manually-reset period of time which we have defined ourselves within the project preferences, so its data will represent any words which have been written between the previous session reset up to the current time.</p>
+<p>With a session that we know was last updated yesterday, we could write:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c0caf5;background-color:#1a1b26;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#414868;font-style:italic">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#414868;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>oldIFS<span style="color:#9ece6a;font-weight:bold">=</span>$IFS
+</span></span><span style="display:flex;"><span>IFS<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#9ece6a">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#9ece6a">&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>yesterday<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#9ece6a">`</span>date -v-1d <span style="color:#9ece6a">&#34;+%Y-%m-%d&#34;</span><span style="color:#9ece6a">`</span>
+</span></span><span style="display:flex;"><span>totalWordCount<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#e0af68">0</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#bb9af7">for</span> file in <span style="color:#9ece6a">`</span>find my_scrivener_folder_location -name <span style="color:#9ece6a">&#34;*.scrivx&#34;</span> -type f<span style="color:#9ece6a">`</span>; <span style="color:#bb9af7">do</span>
+</span></span><span style="display:flex;"><span>  sessionDate<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#9ece6a">`</span>xmllint --xpath <span style="color:#9ece6a">&#34;string(/ScrivenerProject/ProjectTargets/PreviousSession/@Date)&#34;</span> $file<span style="color:#9ece6a">`</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#bb9af7">if</span> <span style="color:#9ece6a;font-weight:bold">[[</span> <span style="color:#9ece6a">&#34;</span>$sessionDate<span style="color:#9ece6a">&#34;</span> <span style="color:#9ece6a;font-weight:bold">==</span> *<span style="color:#9ece6a">&#34;</span>$yesterday<span style="color:#9ece6a">&#34;</span>* <span style="color:#9ece6a;font-weight:bold">]]</span>; <span style="color:#bb9af7">then</span>
+</span></span><span style="display:flex;"><span>    fileWordCount<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#9ece6a">`</span>xmllint --xpath <span style="color:#9ece6a">&#34;string(/ScrivenerProject/ProjectTargets/PreviousSession/@Words)&#34;</span> $file<span style="color:#9ece6a">`</span>
+</span></span><span style="display:flex;"><span>    totalWordCount<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#bb9af7">$((</span>$totalWordCount <span style="color:#9ece6a;font-weight:bold">+</span> $fileWordCount<span style="color:#bb9af7">))</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#bb9af7">fi</span>
+</span></span><span style="display:flex;"><span><span style="color:#bb9af7">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>IFS<span style="color:#9ece6a;font-weight:bold">=</span>$oldIFS
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#9ece6a">echo</span> <span style="color:#9ece6a">&#34;</span>$totalWordCount<span style="color:#9ece6a">&#34;</span>
+</span></span></code></pre></div><p>For the <code>PreviousSession</code> stats to be useful, any Project Target option to automatically reset the session count must be something sane&mdash;exactly what that means for you will depend on how often and how regularly you intend to run your script. If we have a session reset happening at midnight and just target &rsquo;today&rsquo; at the point that the script is run then we&rsquo;ll have an incomplete wordcount if any additional writing occurs afterwards.</p>
+<ul>
+<li>Set Scrivener to reset the session target at midnight, or some other time that you know you&rsquo;ll have stopped writing for the day.</li>
+<li><em>Or</em> manually reset the target yourself before you start writing on a new day</li>
+<li>Make sure your script runs daily before your current day&rsquo;s writing begins</li>
+</ul>
+<p>The script itself might look something like this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c0caf5;background-color:#1a1b26;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#414868;font-style:italic">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#414868;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>yesterday<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#9ece6a">`</span>date -v-1d <span style="color:#9ece6a">&#34;+%Y-%m-%d&#34;</span><span style="color:#9ece6a">`</span>
+</span></span><span style="display:flex;"><span>total<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#9ece6a">`</span>path_to_my/word_counting.script<span style="color:#9ece6a">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#9ece6a">printf</span> <span style="color:#9ece6a">&#34;</span>$yesterday<span style="color:#9ece6a">,</span>$total<span style="color:#9ece6a">\n&#34;</span> &gt;&gt; path_to_my.csv
+</span></span></code></pre></div><p>There are a number of ways in which you could automate the running of your script, the simplest probably being an entry in your <code>cron</code>. On <strong>os x</strong> the standard approach would be to use <code>launchd</code>, however I prefer to use <code>/etc/periodic/daily/</code>, which will still use launchd behind the scenes, in an attempt to guarantee that the script should run once and once only, daily, when my MacBook is awake. There is <a href="http://www.thexlab.com/faqs/maintscripts.html#Anchor-How-35882">no real guarantee</a> however&hellip;</p>
+<h3 id="collecting-data-from-markdown">Collecting Data from Markdown</h3>
+<p>Going after Scrivener data is one approach, but it&rsquo;s a little messy and not generally applicable. So let&rsquo;s talk briefly about my own psychological tics&hellip;</p>
+<p>Scrivener, like most <strong>os x</strong> applications, will automatically save any changes made to a project every few seconds&mdash;the Snapshots feature even allows you to roll back to earlier auto-saved drafts (even though the app <a href="http://www.literatureandlatte.com/forum/viewtopic.php?f=4&amp;t=78&amp;p=123475&amp;hilit=lion+autosave#p123475">doesn&rsquo;t support</a> the built-in <a href="http://support.apple.com/kb/PH14378"><strong>os x</strong> system-level versioning/reverting</a> mechanism for files, since your <code>.scriv</code> document isn&rsquo;t really a single file at all). This means that my multi-decade muscle memory to spam ⌘-S to save every once in a while to make sure I don&rsquo;t lose anything is entirely redundant. So let&rsquo;s repurpose otherwise wasted muscle memory and bind that shortcut to &lsquo;Sync with External Folder Now&rsquo; instead:</p>
+<!-- raw HTML omitted -->
+<p>If you&rsquo;re not on <strong>os x</strong>, or just prefer having that keymap unchanged, you can choose a different keybinding of your choice. This is all about reducing friction for me, so I won&rsquo;t be trying to memorise a new keybinding when an old one is both redundant and semantically correct for this new role.</p>
+<p>At this point we can pick up any plain text files stored in the &lsquo;Drafts&rsquo; folder(s) in the sync target location and run them through <code>wc</code>. I&rsquo;m also running them through <code>bc</code> in the below to ensure that we have only numbers in the output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#c0caf5;background-color:#1a1b26;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#414868;font-style:italic">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#414868;font-style:italic"></span>
+</span></span><span style="display:flex;"><span>fiction<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#9ece6a">`</span>find path_to_my_fiction_folder -type f -path <span style="color:#9ece6a">&#39;*/Draft/*.md&#39;</span> -print0 2&gt;/dev/null |
+</span></span><span style="display:flex;"><span>    xargs -0 cat | wc -w | bc<span style="color:#9ece6a">`</span>
+</span></span><span style="display:flex;"><span>nonfiction<span style="color:#9ece6a;font-weight:bold">=</span><span style="color:#9ece6a">`</span>find path_to_my_nonfiction_folder -type f -path <span style="color:#9ece6a">&#39;*/Draft/*.md&#39;</span> -print0 2&gt;/dev/null |
+</span></span><span style="display:flex;"><span>    xargs -0 cat | wc -w | bc<span style="color:#9ece6a">`</span>
+</span></span><span style="display:flex;"><span><span style="color:#9ece6a">echo</span> <span style="color:#9ece6a">&#34;</span>$fiction<span style="color:#9ece6a">,</span>$nonfiction<span style="color:#9ece6a">&#34;</span>
+</span></span></code></pre></div><p>This has the side benefit of also accounting for words added to those files outside of Scrivener itself, since the reason I sync to an external folder in the first place is to make use of cloud storage and have those files available on any of my devices.</p>
+<h3 id="making-use-of-the-data">Making use of the Data</h3>
+<p>You can read more detail about the setup process for data files on the main <a href="http://jekyllrb.com/docs/datafiles/">Jekyll documentation site</a>, but now that we have our source statistics we need to set up the Jekyll-side to make use of them. Liquid markup isn&rsquo;t always the cleanest in the world, although the lack of any particularly complex syntax does mean that any logic you write is normally fairly parseable and reads much like pseudocode. It does end up looking fairly convoluted when we&rsquo;re working with specific reporting periods, loop offsets, and integer-to-float hackery though:</p>
+<pre tabindex="0"><code class="language-liquid" data-lang="liquid">{% raw %}
+data.addRows([
+    {% for entry in site.data.progress offset:period %}
+        {% assign total = total | plus:entry.fiction | plus:entry.non-fiction | minus:priorTotal %}
+        {% if counter &gt; 7 %}
+            {% assign 7dayMarker = forloop.index0 | plus:period | minus:7 %}
+            {% assign 7dayTotal = 7dayTotal | plus:entry.fiction | plus:entry.non-fiction |
+                minus:site.data.progress[7dayMarker].fiction |
+                minus:site.data.progress[7dayMarker].non-fiction | minus:prior7dayTotal %}
+        {% endif %}
+        [
+            new Date({{ entry.date | date: &#34;%Y&#34; }},
+                {{ entry.date | date: &#34;%m&#34; | minus:1 }},
+                {{ entry.date | date: &#34;%d&#34; }}),
+            {% assign priorEntry = forloop.index0 | plus:period | minus:1 %}
+            {% if counter &gt; 1 %}
+                {{ entry.fiction | minus: site.data.progress[priorEntry].fiction }}
+            {% else %}
+                {{ entry.fiction }}
+            {% endif %},
+            {% if counter &gt; 1 %}
+                {{ entry.non-fiction | minus: site.data.progress[priorEntry].non-fiction }}
+            {% else %}
+                {{ entry.non-fiction }}
+            {% endif %},
+                {{ total | append: &#39;.0&#39; | divided_by:forloop.index }},
+            {% if counter &gt; 7 %}
+                {{ 7dayTotal | append: &#39;.0&#39; | divided_by:7 }}
+                {% assign prior7dayTotal = 7dayTotal %}
+            {% else %}
+                0
+            {% endif %}
+        ],
+        {% assign counter = counter | plus:1 %}
+        {% assign priorTotal = total %}
+    {% endfor %}
+]);
+{% endraw %}
+</code></pre><p>You can read more about the Google Visualisation API on <a href="https://developers.google.com/chart/interactive/docs/reference">Google&rsquo;s Developer pages</a>, but we&rsquo;ll really just need to set up some chart options and make sure the drawing function is called&mdash;I&rsquo;ve put a full example of what the code for a complete transformation from simple date/count pairing into a more featureful graph with a calculated period average and floating 7 day average could look like <a href="https://gist.github.com/dmcgk/bc743a73ae4640ced973#file-complete-js">into a gist</a> for reference.</p>
+<h2 id="putting-it-all-together">Putting it all together</h2>
+<p>It&rsquo;s a fairly limited example, but hopefully it illustrates the main points:</p>
+<ul>
+<li>Any visitors coming to this page will get exactly the same data presented in exactly the same way.</li>
+<li>No new data is being retrieved by the site on each of those visits or when any of the period buttons are clicked.</li>
+<li>I don&rsquo;t need to manually update the page content to reflect any new data which is added over time.</li>
+<li>The graph and its buttons will behave as though they&rsquo;re being updated in a more traditional fashion from a database.</li>
+</ul>
+<p>The only real limitation to this approach&mdash;Leaving aside your thoughts on how robust all that Jekyll tags logic and shell scripting might be&mdash;is that it relies on data captured locally being pushed to GitHub so that Jekyll can update the <strong>html</strong> which forms the data-set. This isn&rsquo;t really a limitation of static websites in this case though, since even a dynamic site would need its back-end database updated, possibly via similar means, and for the same reason.</p>
+<p>Feel free to browse/borrow/tweak the finished source code for your own purposes.</p>
+   
+
+  
+  <p class="tagline">
+    
+    
+    
+    
+    
+    
+    
+      
+    
+      <a href="/technology">#Technology</a>
+    
+  </p>
+  <p class="tagline">
+  <a href="/static-generation-dynamic-content/">
+    <time datetime="2015-02-23 00:00:00 &#43;0000 GMT">
+       February 23, 2015
+    </time>
+  </a>
+  </p>
+  
+</article>
+
+ 
+<footer><p>
+<a href="/">Ꮅ̣ernseed</a>
+&copy;2015<a rel="me" href="https://mastodon.ie/@dmcgk"> 
+<img src="/images/avatar_hu_608317e5ccd72982.webp" alt="Avatar" class="avatar" />
+</a>
+</p>
+</footer>
+
+  </body>
+</html>

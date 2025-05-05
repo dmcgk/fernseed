@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technologies on Ꮅ̣</title>
+    <link>https://fernseed.org/technology/</link>
+    <description>Recent content in Technologies on Ꮅ̣</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Sun, 07 Jan 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://fernseed.org/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://fernseed.org/markdown-with-responsive-images/</link>
+      <pubDate>Sun, 07 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://fernseed.org/markdown-with-responsive-images/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve never liked the overhead of dealing with &lt;a href=&#34;https://fernseed.org/responsive-images-using-markdown-in-scrivener&#34;&gt;responsive image sets in Markdown&lt;/a&gt; when writing for the web. I&amp;rsquo;ve now set up the current version of this site to expect any image links as a simple list as part of the &lt;strong&gt;yaml&lt;/strong&gt; header, rather than within the main body of the post, which is processed further by Jekyll at compile-time.&lt;/p&gt;&#xA;&lt;p&gt;Since I only need to do this part once it can be as complex and edge-casey as I need while keeping the actual written content short and clean.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://fernseed.org/multi-app-single-focus/</link>
+      <pubDate>Mon, 28 Sep 2015 00:00:00 +0100</pubDate>
+      <guid>https://fernseed.org/multi-app-single-focus/</guid>
+      <description>&lt;p&gt;Not everyone makes use of the existing &amp;lsquo;Lion-style&amp;rsquo; full-screen mode in &lt;strong&gt;os x&lt;/strong&gt;&amp;mdash;if you have a particularly large monitor, or just prefer having &lt;a href=&#34;https://overcast.fm/+CdRRhGxw/1:30:21&#34;&gt;multiple overlapping windows&lt;/a&gt; visible at the same time, then you may see it as a waste of screen real estate&amp;mdash;yet the tech world has seen a real growth over the last few years in &lt;a href=&#34;https://ia.net/writer/mac/&#34;&gt;applications&lt;/a&gt; and &lt;a href=&#34;http://selfcontrolapp.com&#34;&gt;tools&lt;/a&gt; which are built with the goal of reducing distraction and increasing focus.&lt;/p&gt;&#xA;&lt;p&gt;For &lt;strong&gt;os x&lt;/strong&gt; users, dedicated Spaces for full-screen apps can be an easy, built-in solution to that same problem of keeping your attention on a single activity. The upcoming &lt;a href=&#34;http://www.apple.com/osx/elcapitan-preview/&#34;&gt;Split View full-screen&lt;/a&gt; mode under &lt;strong&gt;os x&lt;/strong&gt; 10.11 &amp;lsquo;El Capitan&amp;rsquo; has the potential to be a nice expansion of the same idea.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://fernseed.org/responsive-images-using-markdown-in-scrivener/</link>
+      <pubDate>Mon, 14 Sep 2015 00:00:00 +0100</pubDate>
+      <guid>https://fernseed.org/responsive-images-using-markdown-in-scrivener/</guid>
+      <description>&lt;p&gt;One of the main reasons to use [Markdown][#markdown] is to avoid any issues of layout, visual composition or rendering until after the actual content has been written. Unfortunately, when publishing something for the web, issues such as how content will display on different categories of devices do eventually need to be thought about. Image syntax in particular can be cumbersome in Markdown if you need to do something more complex than just specifying a single image and alt text.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title></title>
+      <link>https://fernseed.org/static-generation-dynamic-content/</link>
+      <pubDate>Mon, 23 Feb 2015 00:00:00 +0000</pubDate>
+      <guid>https://fernseed.org/static-generation-dynamic-content/</guid>
+      <description>&lt;p&gt;This is a &lt;a href=&#34;http://en.wikipedia.org/wiki/Static_web_page&#34;&gt;static&lt;/a&gt; website&amp;mdash;the content you&amp;rsquo;re reading now is generated once, for all visitors, then presented in the same way each time for each browser request. That&amp;rsquo;s slightly different from the (current) internet norm of generating content as it&amp;rsquo;s requested, possibly on a targeted per-user basis, and probably using a database or some server-side business logic. Think of Wordpress and its plugins as examples of the latter, while &lt;a href=&#34;http://blog.getpelican.com&#34;&gt;Pelican&lt;/a&gt;, &lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;, and &lt;a href=&#34;http://octopress.org&#34;&gt;Octopress&lt;/a&gt; would be examples of the former.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
