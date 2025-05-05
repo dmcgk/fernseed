@@ -6,8 +6,15 @@
     <description>Recent content in PaintingMiniatures on Ꮅ̣</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
-    <lastBuildDate>Tue, 22 Apr 2025 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Mon, 05 May 2025 00:00:00 +0100</lastBuildDate>
     <atom:link href="https://fernseed.org/tags/paintingminiatures/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://fernseed.org/2025-05-05-17-02/</link>
+      <pubDate>Mon, 05 May 2025 00:00:00 +0100</pubDate>
+      <guid>https://fernseed.org/2025-05-05-17-02/</guid>
+      <description>&lt;p&gt;I&amp;rsquo;ve seen a few different people recently re-start personal blogs and it made me want to tinker with static site tools again&amp;hellip; I&amp;rsquo;ve also been wondering how many little painting projects I&amp;rsquo;ve started and just left half-done here on Mastodon (11. The answer is currently &lt;em&gt;11&lt;/em&gt;).&lt;/p&gt;&#xA;&lt;p&gt;So&amp;hellip; still very much a WIP (another, add it to the count), but technically this works, syncing up Mastodon toots and stats as purely static content:&lt;/p&gt;</description>
+    </item>
     <item>
       <title></title>
       <link>https://fernseed.org/2025-04-22-17-17/</link>

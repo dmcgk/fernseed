@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://fernseed.org/2025-04-25-11-19/</loc>
-    <lastmod>2025-04-25T00:00:00+01:00</lastmod>
+    <loc>https://fernseed.org/2025-05-05-17-02/</loc>
+    <lastmod>2025-05-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://fernseed.org/tags/fediverse/</loc>
+    <lastmod>2025-05-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://fernseed.org/tags/indieweb/</loc>
+    <lastmod>2025-05-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://fernseed.org/micro/</loc>
-    <lastmod>2025-04-25T00:00:00+01:00</lastmod>
+    <lastmod>2025-05-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://fernseed.org/tags/paintingminiatures/</loc>
+    <lastmod>2025-05-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://fernseed.org/tags/</loc>
+    <lastmod>2025-05-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://fernseed.org/</loc>
+    <lastmod>2025-05-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://fernseed.org/2025-04-25-11-19/</loc>
     <lastmod>2025-04-25T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://fernseed.org/2025-04-24-17-14/</loc>
@@ -23,13 +38,7 @@
     <loc>https://fernseed.org/projects/fancy-lad/</loc>
     <lastmod>2025-04-22T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://fernseed.org/tags/paintingminiatures/</loc>
-    <lastmod>2025-04-22T00:00:00+01:00</lastmod>
-  </url><url>
     <loc>https://fernseed.org/projects/</loc>
-    <lastmod>2025-04-22T00:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://fernseed.org/tags/</loc>
     <lastmod>2025-04-22T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://fernseed.org/tags/warhammer/</loc>
